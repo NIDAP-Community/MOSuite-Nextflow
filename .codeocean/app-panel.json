@@ -1,0 +1,540 @@
+{
+	"version": 1,
+	"named_parameters": true,
+	"categories": [
+		{
+			"id": "input_output_options",
+			"name": "Input/output options",
+			"description": "Define where the pipeline should find input data and save output data.",
+			"fa_icon": "fas fa-terminal"
+		},
+		{
+			"id": "clean_raw_counts",
+			"name": "Clean raw counts"
+		},
+		{
+			"id": "filter_counts",
+			"name": "Filter counts"
+		},
+		{
+			"id": "normalize_counts",
+			"name": "Normalize counts"
+		},
+		{
+			"id": "batch_correct_counts",
+			"name": "Batch correct counts"
+		},
+		{
+			"id": "diff_counts",
+			"name": "Differential counts"
+		},
+		{
+			"id": "filter_diff",
+			"name": "Filter differential"
+		},
+		{
+			"id": "developer_options",
+			"name": "Developer options"
+		}
+	],
+	"parameters": [
+		{
+			"id": "V6cf6WLGV7dRy1",
+			"category": "input_output_options",
+			"name": "Samplesheet",
+			"param_name": "samplesheet",
+			"type": "text",
+			"value_type": "string",
+			"required": true
+		},
+		{
+			"id": "oGDPSW3rPAYPzo",
+			"category": "input_output_options",
+			"name": "Counts",
+			"param_name": "counts",
+			"type": "text",
+			"value_type": "string",
+			"required": true
+		},
+		{
+			"id": "m9WeFWYhu9XVOV",
+			"category": "input_output_options",
+			"name": "Outputdir",
+			"param_name": "outputDir",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "results"
+		},
+		{
+			"id": "yr4YaPQMWtouLJ",
+			"category": "input_output_options",
+			"name": "Tracedir",
+			"param_name": "tracedir",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "results/pipeline_info"
+		},
+		{
+			"id": "RRESIFAaJszIvY",
+			"category": "input_output_options",
+			"name": "Publish Dir Mode",
+			"param_name": "publish_dir_mode",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "link"
+		},
+		{
+			"id": "JOUloQV5C4h4Z0",
+			"category": "clean_raw_counts",
+			"name": "Aggregate Rows With Duplicate Gene Names",
+			"param_name": "aggregate_rows_with_duplicate_gene_names",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "true"
+		},
+		{
+			"id": "hKHsAFigKGbcNt",
+			"category": "clean_raw_counts",
+			"name": "Cleanup Column Names",
+			"param_name": "cleanup_column_names",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "true"
+		},
+		{
+			"id": "uB607rT30Wbk1v",
+			"category": "clean_raw_counts",
+			"name": "Split Gene Name",
+			"param_name": "split_gene_name",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "true"
+		},
+		{
+			"id": "3nP1zSvaf18wEG",
+			"category": "clean_raw_counts",
+			"name": "Gene Name Column To Use For Collapsing Duplicates",
+			"param_name": "gene_name_column_to_use_for_collapsing_duplicates",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "E0wulh2uRaH9Ee",
+			"category": "filter_counts",
+			"name": "Filter Group Colname",
+			"param_name": "filter_group_colname",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "Group"
+		},
+		{
+			"id": "WeJOS9cMsJydww",
+			"category": "filter_counts",
+			"name": "Filter Label Colname",
+			"param_name": "filter_label_colname",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "IiCdqDs10Pl9la",
+			"category": "filter_counts",
+			"name": "Filter Minimum Count Value To Be Considered Nonzero",
+			"param_name": "filter_minimum_count_value_to_be_considered_nonzero",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "8"
+		},
+		{
+			"id": "ckhg9m8kiV3495",
+			"category": "filter_counts",
+			"name": "Filter Minimum Number Of Samples With Nonzero Counts In Total",
+			"param_name": "filter_minimum_number_of_samples_with_nonzero_counts_in_total",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "7"
+		},
+		{
+			"id": "PbmPqgOZlk9abn",
+			"category": "filter_counts",
+			"name": "Filter Minimum Number Of Samples With Nonzero Counts In A Group",
+			"param_name": "filter_minimum_number_of_samples_with_nonzero_counts_in_a_group",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "3"
+		},
+		{
+			"id": "e2s2XdVRIhznNs",
+			"category": "filter_counts",
+			"name": "Filter Use Cpm Counts",
+			"param_name": "filter_use_cpm_counts",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "true"
+		},
+		{
+			"id": "1XqEL0Q62DulPR",
+			"category": "filter_counts",
+			"name": "Filter Use Group Based",
+			"param_name": "filter_use_group_based",
+			"type": "list",
+			"value_type": "boolean"
+		},
+		{
+			"id": "bKo1qTGOqAPeR4",
+			"category": "normalize_counts",
+			"name": "Norm Group Colname",
+			"param_name": "norm_group_colname",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "Group"
+		},
+		{
+			"id": "BLIO2Vr1XUgc0G",
+			"category": "normalize_counts",
+			"name": "Norm Label Colname",
+			"param_name": "norm_label_colname",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "WmvVO7671NkZnO",
+			"category": "normalize_counts",
+			"name": "Norm Input In Log Counts",
+			"param_name": "norm_input_in_log_counts",
+			"type": "list",
+			"value_type": "boolean"
+		},
+		{
+			"id": "ZpT9owqWcw4rUC",
+			"category": "normalize_counts",
+			"name": "Voom Normalization Method",
+			"param_name": "voom_normalization_method",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "quantile"
+		},
+		{
+			"id": "LetJQrj8aFOr7A",
+			"category": "batch_correct_counts",
+			"name": "Batch Covariates Colnames",
+			"param_name": "batch_covariates_colnames",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "Group"
+		},
+		{
+			"id": "l5v6EjQLR2m8zZ",
+			"category": "batch_correct_counts",
+			"name": "Batch Colname",
+			"param_name": "batch_colname",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "Batch"
+		},
+		{
+			"id": "M56X3AnyHoz6XO",
+			"category": "batch_correct_counts",
+			"name": "Batch Label Colname",
+			"param_name": "batch_label_colname",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "JFuTqECuZO0Hqf",
+			"category": "batch_correct_counts",
+			"name": "Batch Colors For Plots",
+			"param_name": "batch_colors_for_plots",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "1JHS9hpsY2SJOk",
+			"category": "diff_counts",
+			"name": "Diff Count Type",
+			"param_name": "diff_count_type",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "filt"
+		},
+		{
+			"id": "iSFyhMlgUCQnKl",
+			"category": "diff_counts",
+			"name": "Diff Sub Count Type",
+			"param_name": "diff_sub_count_type",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "mpAMXTSxP2xBaJ",
+			"category": "diff_counts",
+			"name": "Diff Sample Id Colname",
+			"param_name": "diff_sample_id_colname",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "NBjLqGD3mo6wCV",
+			"category": "diff_counts",
+			"name": "Diff Feature Id Colname",
+			"param_name": "diff_feature_id_colname",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "c8W5zmAfsFAC4T",
+			"category": "diff_counts",
+			"name": "Diff Samples To Include",
+			"param_name": "diff_samples_to_include",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "z69mxofmP6IpDj",
+			"category": "diff_counts",
+			"name": "Diff Covariates Colnames",
+			"param_name": "diff_covariates_colnames",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "vLrPlqKj8tyNHe",
+			"category": "diff_counts",
+			"name": "Diff Contrast Colname",
+			"param_name": "diff_contrast_colname",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "ubWePtdrvQxuV7",
+			"category": "diff_counts",
+			"name": "Diff Contrasts",
+			"param_name": "diff_contrasts",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "3Y2gmys1Tqsizm",
+			"category": "diff_counts",
+			"name": "Diff Input In Log Counts",
+			"param_name": "diff_input_in_log_counts",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "false"
+		},
+		{
+			"id": "UQUGNj2jIksEnM",
+			"category": "diff_counts",
+			"name": "Diff Return Mean And Sd",
+			"param_name": "diff_return_mean_and_sd",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "false"
+		},
+		{
+			"id": "ggFDRPDjVlREtl",
+			"category": "diff_counts",
+			"name": "Diff Voom Normalization Method",
+			"param_name": "diff_voom_normalization_method",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "quantile"
+		},
+		{
+			"id": "0IPK44X2J4wjfi",
+			"category": "filter_diff",
+			"name": "Filter Diff Significance Column",
+			"param_name": "filter_diff_significance_column",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "adjpval"
+		},
+		{
+			"id": "IBMQStJsqb0z7e",
+			"category": "filter_diff",
+			"name": "Filter Diff Significance Cutoff",
+			"param_name": "filter_diff_significance_cutoff",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "0.05"
+		},
+		{
+			"id": "dazi7MdSj1aI37",
+			"category": "filter_diff",
+			"name": "Filter Diff Change Column",
+			"param_name": "filter_diff_change_column",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "logFC"
+		},
+		{
+			"id": "Pz4tuC0DdrRnBA",
+			"category": "filter_diff",
+			"name": "Filter Diff Change Cutoff",
+			"param_name": "filter_diff_change_cutoff",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "1"
+		},
+		{
+			"id": "XVaJwUW3HgLvrK",
+			"category": "filter_diff",
+			"name": "Filter Diff Filtering Mode",
+			"param_name": "filter_diff_filtering_mode",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "any"
+		},
+		{
+			"id": "AaAGT3BVF08f4x",
+			"category": "filter_diff",
+			"name": "Filter Diff Include Estimates",
+			"param_name": "filter_diff_include_estimates",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "FC,logFC,tstat,pval,adjpval"
+		},
+		{
+			"id": "YRyLx9mkKSa5ly",
+			"category": "filter_diff",
+			"name": "Filter Diff Round Estimates",
+			"param_name": "filter_diff_round_estimates",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "true"
+		},
+		{
+			"id": "BkdelAdPeZA70I",
+			"category": "filter_diff",
+			"name": "Filter Diff Rounding Decimal For Percent Cells",
+			"param_name": "filter_diff_rounding_decimal_for_percent_cells",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "0"
+		},
+		{
+			"id": "iscL56RPX1173d",
+			"category": "filter_diff",
+			"name": "Filter Diff Contrast Filter",
+			"param_name": "filter_diff_contrast_filter",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "none"
+		},
+		{
+			"id": "7UVEx8uBEaJfkL",
+			"category": "filter_diff",
+			"name": "Filter Diff Contrasts",
+			"param_name": "filter_diff_contrasts",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "3iUtL3MmAjsNgQ",
+			"category": "filter_diff",
+			"name": "Filter Diff Groups",
+			"param_name": "filter_diff_groups",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "j7VPVDhfJfaYMw",
+			"category": "filter_diff",
+			"name": "Filter Diff Groups Filter",
+			"param_name": "filter_diff_groups_filter",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "none"
+		},
+		{
+			"id": "eWEyS14dFUGfhu",
+			"category": "filter_diff",
+			"name": "Filter Diff Label Font Size",
+			"param_name": "filter_diff_label_font_size",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "6"
+		},
+		{
+			"id": "qnPkdgGCLXm9HH",
+			"category": "filter_diff",
+			"name": "Filter Diff Label Distance",
+			"param_name": "filter_diff_label_distance",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "1"
+		},
+		{
+			"id": "GaBesoJx0hHvx5",
+			"category": "filter_diff",
+			"name": "Filter Diff Y Axis Expansion",
+			"param_name": "filter_diff_y_axis_expansion",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "0.08"
+		},
+		{
+			"id": "KBpRmU76JR3UtP",
+			"category": "filter_diff",
+			"name": "Filter Diff Fill Colors",
+			"param_name": "filter_diff_fill_colors",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "steelblue1,whitesmoke"
+		},
+		{
+			"id": "uNaLbUReATyodz",
+			"category": "filter_diff",
+			"name": "Filter Diff Pie Chart In 3D",
+			"param_name": "filter_diff_pie_chart_in_3d",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "true"
+		},
+		{
+			"id": "piW0P64noms74v",
+			"category": "filter_diff",
+			"name": "Filter Diff Bar Width",
+			"param_name": "filter_diff_bar_width",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "0.4"
+		},
+		{
+			"id": "0zKixB7hAEwjEF",
+			"category": "filter_diff",
+			"name": "Filter Diff Draw Bar Border",
+			"param_name": "filter_diff_draw_bar_border",
+			"type": "list",
+			"value_type": "boolean",
+			"default_value": "true"
+		},
+		{
+			"id": "pqVPgDlmfU8eDs",
+			"category": "filter_diff",
+			"name": "Filter Diff Plot Type",
+			"param_name": "filter_diff_plot_type",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "bar"
+		},
+		{
+			"id": "HMIfe1LlJM8CiE",
+			"category": "filter_diff",
+			"name": "Filter Diff Plot Titles Fontsize",
+			"param_name": "filter_diff_plot_titles_fontsize",
+			"type": "text",
+			"value_type": "number",
+			"default_value": "12"
+		},
+		{
+			"id": "u390RcgkJhpXLy",
+			"category": "developer_options",
+			"name": "Container",
+			"param_name": "container",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "nciccbr/mosuite:v0.2.0.9000_3807d01",
+			"hidden": true
+		}
+	]
+}
